@@ -40,6 +40,10 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+#myDuck {
+  position: absolute;
+}
+
 p{
   text-align: justify;
 }
