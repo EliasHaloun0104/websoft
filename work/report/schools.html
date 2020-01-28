@@ -54,7 +54,7 @@ Comments are written as HTML style.
               var kommunCount = jsonKommuner.length;
               daySelect = document.getElementById("kommunForm");
               for (var i = 0; i < kommunCount; i++) {
-                daySelect.options[i] = new Option(jsonKommuner[i].Namn + jsonKommuner[i].Kommunkod, jsonKommuner[i].Kommunkod);
+                daySelect.options[i] = new Option(jsonKommuner[i].Namn + " "+ jsonKommuner[i].Kommunkod, jsonKommuner[i].Kommunkod);
               }
             }
           };
