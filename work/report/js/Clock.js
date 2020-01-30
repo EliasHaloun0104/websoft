@@ -5,8 +5,8 @@ coding by: Elias Haloun*/
 //Make the canvas as a variable, Basic convert
 
 var toRadians = Math.PI / 180;
-var xxx = 300;
-var yyy = 200;
+var xxx = 200;
+var yyy = 150;
 init();
 window.addEventListener('keydown',doKeyDown,true);
 
@@ -15,7 +15,7 @@ function init() {
 	canvas = document.getElementById("Clock");
 	ctx = canvas.getContext("2d");
 	function klockan(){
-		drawClock(xxx,yyy,350,'lightblue', 'grey', 'orange');
+		drawClock(xxx,yyy,300,'lightblue', 'grey', 'orange');
 	}
 	return setInterval(klockan, 200);
 }
@@ -110,21 +110,4 @@ function lightHands(Xpos,Ypos,ClockSize, Color, line, length, loc) {
 	ctx.strokeStyle = Color;
 	ctx.stroke();
 	
-}
-
-function doKeyDown(evt){
-	switch (evt.keyCode) {
-		case 38:  // Up arrow
-			yyy -= 10;				
-			break;
-		case 40:  //Down arrow
-			yyy += 10;
-			break;
-		case 37:  //Left arrow
-			xxx -= 10;
-			break;
-		case 39:  //Right arrow
-			xxx += 10;
-			break;
-	}	
 }
