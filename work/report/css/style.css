@@ -2,16 +2,16 @@
  * Comments are written as C++ style. 
  */
 html {
-    overflow-y: scroll;
-    font-family: 'Merriweather', serif;
+  overflow-y: scroll;
+  font-family: "Merriweather", serif;
 }
 
 body {
-    margin: 8px auto;
-    margin-bottom: 100px;
-    clear: both;
-    background: #fff;
-    width: 700px;
+  margin: 8px auto;
+  margin-bottom: 100px;
+  clear: both;
+  background: #fff;
+  width: 700px;
 }
 
 #myPhoto {
@@ -30,7 +30,8 @@ table {
   width: 100%;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
@@ -44,57 +45,124 @@ tr:nth-child(even) {
   position: absolute;
 }
 
-p{
+p {
   text-align: justify;
 }
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-   
-  li {
-    border-bottom: 1px solid #ccc;
-  }
-   
-  li:last-child {
-    border: none;
-  }
-   
-  li a {
-    text-decoration: none;
-    color: #000;
-    display: block;
-   
-    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
-    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
-    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
-    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
-    transition: font-size 0.3s ease, background-color 0.3s ease;
-  }
-   
-  li a:hover {
-    font-size: 20px;
-    background: #f6f6f6;
-  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-  footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: blueviolet;
-    color: white;
-    text-align: center;
- }
+li {
+  border-bottom: 1px solid #ccc;
+}
 
- nav {
-  overflow: hidden;
+li:last-child {
+  border: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+li a:hover {
+  font-size: 20px;
+  background: #f6f6f6;
+}
+
+.flagLink {
   background-color: blueviolet;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Merriweather", serif;
+}
+
+.flagDiv {
+  opacity: 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 2px solid blueviolet;
+  border-radius: 5px;
+  padding: 5px;
+  height: 450px;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: blueviolet;
+  color: white;
+  text-align: center;
+}
+
+nav {
   position: fixed;
   top: 0;
   left: 0;
+  overflow: hidden;
+  background-color: blueviolet;
   width: 100%;
 }
 
@@ -112,4 +180,3 @@ nav a:hover {
   background: #ddd;
   color: black;
 }
-
