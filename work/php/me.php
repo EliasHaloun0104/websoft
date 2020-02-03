@@ -14,16 +14,7 @@
 Comments are written as HTML style.
 -->
 
-
-<header>
-    <nav>
-        <a href="me.html">Me</a>
-        <a href="report.html">Report</a>
-        <a href="about.html">About</a>
-        <a href="flag.html">Flags</a>
-        <a href="schools.html">Schools</a>
-      </nav>
-</header>
+<?php include 'view/header.php'?>
 
 <div id="myDuck">
     <img src="img/duck.png" alt="duck" width="50px">
@@ -49,10 +40,7 @@ Comments are written as HTML style.
 
 </article>
 
-<footer>
-    <hr>
-    <h6>Elias Haloun e-mail: elias.haloun0104@stud.hkr.se phone: +46xxxxxxxx</h6>
-</footer>
+<?php include 'view/footer.php'?>
 
 
 

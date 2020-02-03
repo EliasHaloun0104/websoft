@@ -12,15 +12,7 @@
 
 
 
-    <header>
-        <nav>
-            <a href="me.html">Me</a>
-            <a href="report.html">Report</a>
-            <a href="about.html">About</a>
-            <a href="flag.html">Flags</a>
-            <a href="schools.html">Schools</a>
-        </nav>
-    </header>
+<?php include 'view/header.php'?>
 
     <div id="myDuck">
         <img src="img/duck.png" alt="duck" width="50px">
@@ -67,11 +59,10 @@
 
 </article>
 
-<footer>
-    <hr>
-    <h6>Elias Haloun e-mail: elias.haloun0104@stud.hkr.se phone: +46xxxxxxxx</h6>
-</footer>
-
 <script type="text/javascript" src="js/main.js"></script>
+
+<?php include 'view/footer.php'?>
+
+
 </body>
 </html>

@@ -17,15 +17,7 @@
 Comments are written as HTML style.
 -->
 
-    <header>
-      <nav>
-        <a href="me.html">Me</a>
-        <a href="report.html">Report</a>
-        <a href="about.html">About</a>
-        <a href="flag.html">Flags</a>
-        <a href="schools.html">Schools</a>
-      </nav>
-    </header>
+<?php include 'view/header.php'?>
 
     <div id="myDuck">
       <img src="img/duck.png" alt="duck" width="50px">
@@ -108,7 +100,7 @@ Comments are written as HTML style.
           <div style="background-color: red; width: 60%; height: 190px; float:right;"></div>
         </div>
     </div>
-
+    <?php include 'view/footer.php'?>
     
   </body>
 </html>

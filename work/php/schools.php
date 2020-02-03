@@ -16,15 +16,7 @@
 Comments are written as HTML style.
 -->
 
-    <header>
-      <nav>
-        <a href="me.html">Me</a>
-        <a href="report.html">Report</a>
-        <a href="about.html">About</a>
-        <a href="flag.html">Flags</a>
-        <a href="schools.html">Schools</a>
-      </nav>
-    </header>
+  <?php include 'view/header.php'?>
 
     <article>
       <form style="margin-top: 200px" action="">
@@ -51,11 +43,7 @@ Comments are written as HTML style.
 
     
     
-    <footer>
-      <h6>
-        Elias Haloun e-mail: elias.haloun0104@stud.hkr.se phone: +46xxxxxxxx
-      </h6>
-    </footer>
+    <?php include 'view/footer.php'?>
 
     
     <script type="text/javascript" src="js/main.js"></script>
