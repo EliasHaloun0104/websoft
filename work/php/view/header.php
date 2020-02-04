@@ -8,6 +8,8 @@ echo '<header>
         <a href="flag.php">Flags</a>
         <a href="schools.php">Schools</a>
         <a href="search.php">Search</a>
+        <a href="create.php">Create</a>
+        <a href="update.php">Update</a>
       </nav>
 </header>'
 ?>
