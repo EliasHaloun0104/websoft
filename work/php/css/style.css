@@ -92,6 +92,17 @@ li a:hover {
   font-family: "Merriweather", serif;
 }
 
+.generalBtn{
+  background-color: blueviolet;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;  
+  font-family: "Merriweather", serif;
+  margin-left: 20px;
+}
+
 .flagLink {
   background-color: blueviolet;
   border: none;
