@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Update</title>
+    <title>Delete</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap"
@@ -46,7 +46,7 @@ Comments are written as HTML style.
   while ($row = $q->fetch()):
     echo '<div style="width:100%; height:150px; border: 2px solid blueviolet; margin: 5px;">';
     $formID = 'form'.$row["id"];
-    echo '<form id='.$formID.' action="update.php" method="post">';
+    echo '<form id='.$formID.' action="delete.php" method="post">';
     echo '<div style="float: left; width: 10%;">
     <p>ID</p>
     <p>Note</p>
@@ -57,34 +57,28 @@ Comments are written as HTML style.
     echo '<textarea form='.$formID.' name="text" style="width:100%; margin:10px;">'.$row["note"].'</textarea>';
     echo prioritySelect($row["priority"], $formID);
     echo '</div>';   
-    echo '<input form='.$formID.' type="submit" name="update" value="Update" class="generalBtn" style="width:30%; margin:30px;">';
+    echo '<input form='.$formID.' type="submit" name="delete" value="Delete" class="generalBtn" style="width:30%; margin:30px;">';
     echo '</form>';
     echo '</div>'; 
 
   endwhile;
   
-  if(isset($_POST['update']))
+  if(isset($_POST['delete']))
     {      
-      $noteId = (int)$_POST['noteId']; 
-      $priority = (int)$_POST['priority'];
-      $noteA = htmlentities($_POST['text']);
+      $noteId = (int)$_POST['noteId'];      
       
       
       try {
 
         $pdo = connectDatabase($dsn);
-        $sql = "UPDATE notes SET note=?, priority=? WHERE id=?;";
+        $sql = "DELETE FROM notes WHERE id = ?";
         $statement = $pdo->prepare($sql); 
-        $statement->bindParam(1, $noteA, PDO::PARAM_STR);
-        $statement->bindParam(2, $priority, PDO::PARAM_INT);
-        $statement->bindParam(3, $noteId, PDO::PARAM_INT);
+        $statement->bindParam(1, $noteId, PDO::PARAM_INT);
 
         //bind values and execute insert query
         if($statement->execute()){
-          debug("updated");
           //print "Your note has been updated!";
         }else{
-          debug("failed");
           //print $pdo->error; //show mysql error if any
         }
         

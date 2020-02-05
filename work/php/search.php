@@ -36,17 +36,12 @@ Comments are written as HTML style.
                     
                 
   <?php
-  //$myfile = fopen("Auth.txt", "r") or die("Unable to open file!");
-  $dbname = 'id12458153_mynotedatabase';
-  $host = 'localhost';
-  $username = 'id12458153_eliashaloun';
-  $password = 'n%Y3vkkixGqi7.8';  
-  //fclose($myfile);
-
-
+  require "config.php";
+  require "functions.php";
+  
   $q;
   try{
-  $pdo = new PDO("mysql:host=".$host.";dbname=".$dbname, $username, $password);
+  $pdo = connectDatabase($dsn);
   $sql = 'SELECT * FROM notes where note LIKE "W%"';
   $q = $pdo->query($sql);
   $q->setFetchMode(PDO::FETCH_ASSOC);
