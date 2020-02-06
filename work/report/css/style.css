@@ -41,9 +41,7 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-#myDuck {
-  position: absolute;
-}
+
 
 p {
   text-align: justify;
@@ -80,17 +78,18 @@ li a:hover {
   background: #f6f6f6;
 }
 
-#duckButton{
-  background-color: blueviolet;
+#myDuck {  
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url("../img/duck.png");
+  background-repeat:no-repeat;
   border: none;
-  color: white;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 10px;
-  font-family: "Merriweather", serif;
+  background-size: 75%;
+  background-color: transparent;
+  background-position: center;
 }
+
 
 .flagLink {
   background-color: blueviolet;

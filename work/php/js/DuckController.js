@@ -1,64 +1,22 @@
-dragElement(document.getElementById("myDuck"));
-var numberOfdrag = 0;
-
 function hideTheDuck() {
-  document.getElementById("myDuck").style.display = "none";
+  var elem = document.getElementById("myDuck");
+  elem.style.display = "none";
   var wait = 0;
   var timer = setInterval(function() {
     if (wait == 1) {
       clearInterval(timer);
-      document.getElementById("myDuck").style.display = "block";
+      elem.style.display = "block";
+      var w = window.innerWidth-elem.style.width;
+      if(w<0) w=0;
+      var h = window.innerHeight-elem.style.height;
+      if(h<0) h=0;
+      var left = Math.floor(w* Math.random());
+      var top = Math.floor(h* Math.random());
+      elem.style.top = top + "px";
+      elem.style.left = left + "px";
+
+    
     }
     wait++;
-  }, 3000);
-}
-
-function randomPosition(){
-  
-}
-
-function dragElement(elmnt) {
-  var pos1 = 0,
-    pos2 = 0,
-    pos3 = 0,
-    pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
-    elmnt.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = elmnt.offsetTop - pos2 + "px";
-    elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
-  }
-
-  function closeDragElement() {
-    // stop moving when mouse button is released:
-    document.onmouseup = null;
-    document.onmousemove = null;
-    numberOfdrag++;
-    document.getElementById("duckCounter").innerText = numberOfdrag + " times";
-  }
+  }, 1000);
 }

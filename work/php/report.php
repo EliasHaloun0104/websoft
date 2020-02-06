@@ -13,11 +13,7 @@
 
 
     <?php include 'view/header.php'?>
-    <div id="myDuck">
-        <img src="img/duck.png" alt="duck" width="50px">
-        <p id="duckCounter" style="font-size: 10px; text-align: center;">drag me!</p>
-        <button id="duckButton" onclick="hideTheDuck()">hide me!</button>     
-    </div>
+    <button id="myDuck" onclick="hideTheDuck()"></button>
     <script type="text/javascript" src="js/DuckController.js"></script>
 
 
