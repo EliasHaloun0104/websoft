@@ -21,8 +21,53 @@
 
 
 <h1 style="margin-top: 100px;">The lottery Lotto</h1>
+
 <h2 style="text-align: center;">The winning numbers are:</h2>
 <p style="text-align: center; font-size: larger;"><%= lottoNum %></p>
+<table id="num" style="width: 70%; margin: 0 auto;"></table>
+<div id="clientNum"></div>
+<script>
+    var winningNumbers = "<%= lottoNum %>";
+    var arr = winningNumbers.split(",");
+    var table = "<tr>";
+    for(var i=1; i<36; i++){
+        if(arr.includes(i.toString())){
+            table += "<td style='background-color: red; text-align:center;'>" + i + "</td>";
+        }else{
+            table += "<td style='background-color: white; text-align:center;'>" + i + "</td>";
+        }    
+        if(i==10 || i== 20 || i==30){
+            table += "</tr><tr>"; 
+        }           
+    }
+    table += "</tr>";    
+    document.getElementById("num").innerHTML = table;
+    var yourNumbers = "<%= yourLotto %>"; 
+    if(yourNumbers.length>1){
+        var yourArr = yourNumbers.split(",");
+        var elem = "<h2 style='text-align: center;'>Your numbers are:</h2>";
+        elem += "<p style='text-align: center; font-size: larger;'><%= yourLotto %></p>";
+        elem += "<table style='width: 70%; margin: 0 auto;'>";
+        elem += "<tr>";
+        for(var i=1; i<36; i++){        
+            if(yourArr.includes(i.toString())){
+                elem += "<td style='background-color: red; text-align:center;'>" + i + "</td>";
+            }else{
+                elem += "<td style='background-color: white; text-align:center;'>" + i + "</td>";
+            }
+            if(i==10 || i== 20 || i==30) elem += "</tr><tr>";
+        }
+        elem += "</tr></table>";
+        var match = '<%= identical %>';
+        elem += '<h2 style="text-align: center;">' + match + '</h2>';
+        document.getElementById("clientNum").innerHTML = elem;
+    }
+      
+      
+    
+  
+</script>
+
 
 <footer >
     <h6>Elias Haloun e-mail: elias.haloun0104@stud.hkr.se phone: +46xxxxxxxx</h6>
