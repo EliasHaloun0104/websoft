@@ -21,14 +21,14 @@ Comments are written as HTML style.
 
     <div style="margin-top: 100px;">
     <table>
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Note</th>
-                        <th>priority</th>
-                    </tr>
-                </thead>
-                <tbody>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Note</th>
+          <th>priority</th>
+        </tr>
+      </thead>
+      <tbody>
                     
                 
   <?php

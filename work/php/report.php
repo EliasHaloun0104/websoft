@@ -75,7 +75,10 @@
 
 <section>
 <h2>S05</h2>
-<p>Here is the text for this section.</p>
+<p>PHP for me is totally new language, even I try it before but it still so strange, some code syntax and other function is totally diffrenet from other language that I know. Some expression like &lt;&lt;&lt;EOD and then some text and then EOD again, the other expression is this one $var and then ?? this two question marks. So in every step during this section I struggle to understand the language.</p>
+<p>The other part while writing the 'While' loop which should end by 'End While' and the same for if else statment. All these make PHP so bizzared for me and the diff between PHP and Java till example is much bigger than Java & JavaScript</p>
+<p>I always seeking grade 5, I found it hard to understand and implment the php code by it self so I start my assignment by create a real website <a href='http://websoft-course.000webhostapp.com/work/php/'>http://websoft-course.000webhostapp.com/work/php/<a> and create a database there cause I have some problems in running the Xampp server on my PC. Then I starting getting results from the database using PHP code and then add the feature of Update, Delete, Create and Search, improve the header & footer. and then clean the and enhance the PHP code to be more dynamic.</p>
+<p>Since I'm interested in the backend developing, I found PHP is very potentiol for my carrier but I need more paractic to involve in it.</p>
 </section>
 
 <section>
