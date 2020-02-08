@@ -214,15 +214,11 @@ nav a:hover {
 .tableRow
 {
     display:table-row;
+    line-height: 20px;
+    vertical-align: middle;
+
 }
-.tableCell
-{
-    display:table-cell;
-    margin: 5px;
-    font-family: "Merriweather", serif;
-    height: 20%;
-}
-.tableButton
+.tableCell_input, .tableCell_select, .tableButton
 {
   display:table-cell;
   background-color: blueviolet;
@@ -234,6 +230,25 @@ nav a:hover {
   font-family: "Merriweather", serif;
   margin-left: 10px;
 }
+.tableCell_input{
+  float: left;
+}
+
+
+.tableCell_textArea{
+  display:table-cell;
+  background-color: blueviolet;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;  
+  font-family: "Merriweather", serif;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+
 
 
 

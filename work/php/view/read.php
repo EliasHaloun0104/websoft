@@ -13,9 +13,9 @@ function oneRecordInForm($id, $note, $priority, $isUpdate, $isDelete, $isCreate)
     $formID = 'form' . $id;
     
     echo '<form id=' . $formID . ' class="tableRow" action="" method="post">'; 
-    echo '<input class="tableCell" form=' . $formID . ' name="noteId" value=' . $id . ' readonly>';
+    echo '<input class="tableCell_input" form=' . $formID . ' name="noteId" value=' . $id . ' readonly>';
     
-    echo '<textarea class="tableCell" form=' . $formID . ' name="text"">' . $note . '</textarea>';
+    echo '<textarea class="tableCell_textArea" form=' . $formID . ' name="text"">' . $note . '</textarea>';
     echo prioritySelect($priority, $formID);
     if($isUpdate){
       echo '<input form=' . $formID . ' type="submit" name="update" value="Update" class="tableButton">';
@@ -30,7 +30,7 @@ function oneRecordInForm($id, $note, $priority, $isUpdate, $isDelete, $isCreate)
   }
   function prioritySelect($string, $formID)
   {
-    echo '<select form=' . $formID . ' class="tableCell" name="priority">';
+    echo '<select form=' . $formID . ' class="tableCell_select" name="priority">';
     option("1", $string);
     option("2", $string);
     option("3", $string);
@@ -45,19 +45,7 @@ function oneRecordInForm($id, $note, $priority, $isUpdate, $isDelete, $isCreate)
       echo '<option value="'.$OriginalValue.'" ' . ($string == $OriginalValue ? 'selected="selected"' : '') . '>'.$OriginalValue.'</option>';
   }
 
-  function fetchAllRow($q)
-  {
-    echo '<div class="tableForm">';
-    echo '<div class="tableRow">';
-    //echo '<h5 class="tableCell">ID / Note / Priority</h5>';            
-    
-    echo '</div>';
-    while ($row = $q->fetch()):
-      oneRecordInForm($row["id"], $row["note"], $row["priority"], true, true, false);
-    endwhile;
-    oneRecordInForm("-","","", false,false, true);
-    echo '</div>';
-  }
+  
 
 
 

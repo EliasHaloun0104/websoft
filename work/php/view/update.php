@@ -13,10 +13,10 @@
 
     //bind values and execute insert query
     if ($statement->execute()) {
-      debug("updated");
+      debug("The Note updated.");
       //print "Your note has been updated!";
     } else {
-      debug("failed");
+      debug("Something went wrong");
       //print $pdo->error; //show mysql error if any
     }
   }
