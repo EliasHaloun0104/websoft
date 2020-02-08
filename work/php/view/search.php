@@ -22,7 +22,7 @@ function fetchRowIntoHTML($q)
     echo '<div class="tableForm">';
     echo '<div class="tableRow">';
     //echo '<h5 class="tableCell">ID / Note / Priority</h5>';            
-    
+    title();
     echo '</div>';
     while ($row = $q->fetch()):
       oneRecordInForm($row["id"], $row["note"], $row["priority"], true, true, false);

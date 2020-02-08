@@ -9,6 +9,17 @@ function fetchData($pdo){
     return $q;
 }
 
+function title(){
+  echo '<form class="tableRow">'; 
+  echo '<input class="tableCell_input" value=ID readonly>';
+  echo '<input class="tableCell_input" value=Note readonly>';
+  echo '<input class="tableCell_input" value=Priority readonly>';
+  
+  echo '</form>'; 
+     
+   
+}
+
 function oneRecordInForm($id, $note, $priority, $isUpdate, $isDelete, $isCreate){      
     $formID = 'form' . $id;
     

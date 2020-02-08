@@ -216,6 +216,7 @@ nav a:hover {
     display:table-row;
     line-height: 20px;
     vertical-align: middle;
+    margin-bottom: 20px;
 
 }
 .tableCell_input, .tableCell_select, .tableButton
