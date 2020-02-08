@@ -1,10 +1,7 @@
 <?php
-
-
-
 if(isset($_POST['create']))
 {
-    $note = $_POST['note'];
+    $note = $_POST['text'];
     $priority = (int)$_POST['priority'];
     $pdo = connectDatabase($dsn);   
     
@@ -19,6 +16,5 @@ if(isset($_POST['create']))
     }else{
         print $pdo->error; //show mysql error if any
     }
-
 }
 ?>

@@ -1,7 +1,4 @@
   <?php
-  require "config.php";
-  require "functions.php";
-
   if (isset($_POST['update'])) {
     $noteId = (int) $_POST['noteId'];
     $priority = (int) $_POST['priority'];

@@ -11,8 +11,10 @@ ini_set("display_errors", 1);     // Display all errors
 $dsn = [
     'dbname' => 'id12458153_mynotedatabase',
     'host' => 'localhost',
-    'username' => 'id12458153_eliashaloun',
-    'password' => 'n%Y3vkkixGqi7.8'    
+    'username' => 'root',
+    'password' => '' 
+    //'username' => 'id12458153_eliashaloun',
+    //'password' => 'n%Y3vkkixGqi7.8'    
 ];
 
 

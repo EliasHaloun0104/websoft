@@ -1,7 +1,4 @@
 <?php
-require "config.php";
-require "functions.php";
-
 if(isset($_POST['delete']))
   {      
     $noteId = (int)$_POST['noteId'];  
@@ -17,3 +14,4 @@ if(isset($_POST['delete']))
         //print $pdo->error; //show mysql error if any
       }
     }
+    ?>
