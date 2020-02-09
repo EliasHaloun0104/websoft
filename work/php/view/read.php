@@ -14,10 +14,7 @@ function title(){
   echo '<input class="tableCell_input" value=ID readonly>';
   echo '<input class="tableCell_input" value=Note readonly>';
   echo '<input class="tableCell_input" value=Priority readonly>';
-  
-  echo '</form>'; 
-     
-   
+  echo '</form>';
 }
 
 function oneRecordInForm($id, $note, $priority, $isUpdate, $isDelete, $isCreate){      
@@ -55,13 +52,3 @@ function oneRecordInForm($id, $note, $priority, $isUpdate, $isDelete, $isCreate)
   function option($OriginalValue, $string){
       echo '<option value="'.$OriginalValue.'" ' . ($string == $OriginalValue ? 'selected="selected"' : '') . '>'.$OriginalValue.'</option>';
   }
-
-  
-
-
-
-?>
-
-
-
-

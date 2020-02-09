@@ -27,6 +27,7 @@ function fetchRowIntoHTML($q)
     while ($row = $q->fetch()):
       oneRecordInForm($row["id"], $row["note"], $row["priority"], true, true, false);
     endwhile;
+    //Add empty raw to allow create new record
     oneRecordInForm("-","","", false,false, true);
     echo '</div>';
   }

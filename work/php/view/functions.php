@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Open the database file and catch the exception it it fails
  *
@@ -9,7 +10,7 @@
 function connectDatabase(array $dsn)
 {
     try {
-        $pdo = new PDO("mysql:host=".$dsn['host'].";dbname=".$dsn['dbname'], $dsn['username'], $dsn['password']);    
+        $pdo = new PDO("mysql:host=" . $dsn['host'] . ";dbname=" . $dsn['dbname'], $dsn['username'], $dsn['password']);
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
@@ -20,12 +21,7 @@ function connectDatabase(array $dsn)
     return $pdo;
 }
 
-
-
-function debug($str){
-    echo '<script>alert("'.$str.'")</script>';
+function debug($str)
+{
+    echo '<script>alert("' . $str . '")</script>';
 }
-
-  
-
-  
