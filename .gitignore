@@ -1,4 +1,10 @@
 .vscode/ftp-sync.json
 work/php/Auth.txt
+# nodejs
 node_modules/
 package-lock.json
+
+# dotnet
+project.lock.json
+[Bb]in/
+[Oo]bj/
