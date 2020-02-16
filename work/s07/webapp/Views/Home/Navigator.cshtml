@@ -1,0 +1,37 @@
+﻿
+@{
+	ViewData["Title"] = "Navigator";
+}
+@model List<Account>
+
+
+<h1>Navigator</h1>
+<div class="text-center">	
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">Number</th>
+				<th scope="col">Balance</th>
+				<th scope="col">Label</th>
+				<th scope="col">Owner</th>
+				<th scope="col">Next</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th id="navNum" scope="row">@Model[0].Number</th>
+				<td id="navBalance" >@Model[0].Balance</td>
+				<td id="navLabel" >@Model[0].Label</td>
+				<td id="navOwner">@Model[0].Owner</td>
+				<td><button onclick="next()" class="btn btn-primary btn-lg">&#9658;</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+	
+
+
+
+	
+
+

@@ -1,0 +1,99 @@
+﻿
+@{
+	
+	@model List<Account>
+	ViewData["Title"] = "Transfer";
+
+}
+
+
+<h1>@ViewData["Title"]</h1>
+
+
+
+<div class="text-center">
+	<h2>Using API</h2>
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col"></th>
+				<th scope="col">Number</th>
+				<th scope="col">Balance</th>
+				<th scope="col">Label</th>
+				<th scope="col">Owner</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<tr>
+				<th>From:</th>
+				<th scope="row">
+					<select id="from" onchange="GetAccount('from')">
+						<option></option>
+						@foreach (var item in Model)
+						{
+							<option value="@item.Number">@item.Number</option>
+						}
+					</select>
+				</th>
+				<th><input type="text" id="fromBalance" readonly /></th>
+				<th><input type="text" id="fromLabel" readonly /></th>
+				<th><input type="text" id="fromOwner" readonly /></th>
+			</tr>
+
+			<tr>
+				<th>To:</th>
+				<th scope="row">
+					<select id="to" onchange="GetAccount('to')">
+						<option></option>
+						@foreach (var item in Model)
+						{
+							<option value="@item.Number">@item.Number</option>
+						}
+					</select>
+				</th>
+				<th><input type="text" id="toBalance" readonly /></th>
+				<th><input type="text" id="toLabel" readonly /></th>
+				<th><input type="text" id="toOwner" readonly /></th>
+
+			</tr>
+
+			<tr>
+				<th>Amount:</th>
+				<th></th>
+				<th scope="row"><input type="text" id="amount" /></th>
+				<th><button class="btn btn-primary btn-lg" onclick="transfer()">Proceed</button></th>
+
+				<th></th>
+
+			</tr>
+
+
+		</tbody>
+	</table>
+</div>
+
+<div class="text-left">
+	<h2>Using HTML Post</h2>	
+	<form method="post">
+		<div class="form-group">
+			<label>From</label>
+			<input type="text" name="idFrom"/>
+		</div>
+		<div class="form-group">
+			<label>To</label>
+			<input type="text" name="idTo"/>
+		</div>
+		<div class="form-group">
+			<label>Amount</label>
+			<input type="text" name="idAmount"/>
+		</div>
+		<input type="submit" asp-controller="Transfer" value="Proceed" class="btn btn-primary btn-lg">
+	</form>
+</div>
+
+
+
+
+
+

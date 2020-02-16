@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<Account>
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Number</th>
+                    <th scope="col">Balance</th>
+                    <th scope="col">Label</th>
+                    <th scope="col">Owner</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <th scope="row">@item.Number</th>
+                    <td>@item.Balance</td>
+                    <td>@item.Label</td>
+                    <td>@item.Owner</td>                  
+                   
+                </tr>
+                }
+                    
+            </tbody>
+        </table>
+
+        
+
+    </div>

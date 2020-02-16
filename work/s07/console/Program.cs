@@ -64,19 +64,7 @@ namespace console
                 else
                 {
                     HelpModule.WriteLine("Please enter a valid number!");
-                }
-
-                /*
-                while (true)
-                {
-                    var result = Console.ReadLine();
-                    int resultInt = HelpModule.ValidateInt(result);
-                    if (resultInt >= 1 && resultInt <= 6) return resultInt;
-                    else
-                    {
-                        HelpModule.WriteLine("Please enter a valid number!");
-                    }
-                }*/
+                }            
                 
             }
         }
