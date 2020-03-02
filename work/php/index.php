@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Report from the course sections</title>
+    <title>Report cfrom the course sections</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
