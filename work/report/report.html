@@ -142,7 +142,20 @@ For this section I learnt a little about website performance and some basic rule
 
 <section>
 <h2>S09</h2>
-<p>Here is the text for this section.</p>
+<p>The Most common attack that I heard about through my study is <i>Injection</i>, it's easy to understand and easy to avoid using proper tools. The injection depend on using the SQL syntax to add some expression such as <br/>"Update someRecords in Table where num = input"<br/>The above syntax will update all records in the table if the user/hacker enter an input "5 OR true" instead of just "5"</p>
+<p><i>Sensitive Data Exposure</i>, is a comman type of attack, the name expresses itself, many services don't care about protecting the sensitive data. The main problem is not is not encrypting sensitive data, or using old weak encrypt method if exist.
+</p>
+<p><i>Using Components with Known Vulnerabilities.</i>The Components such as libraries, and frameworks, If a vulnerability is exploited in one of the components could lead to easy accessing to sensitve data. 
+</p>
+<h4>The essential guidelines to follow to create secure web applications</h4>
+<ul>
+    <li>Prevent SQL injection by using proper methond</li>
+    <li>Storing password & other sensitive data in an encrypted way</li>
+    <li>Contextual output encoding/escaping is a crucial programming technique needed to stop XSS. I didn't understand this part well put I added it anyway.</li>
+    <li>Add multi-factor authentication</li>
+    <li>Secure forget password process</li>    
+</ul>
+<p>In this section I learnt some basic concept of the web security, It seems that I still miss the whole picture as well as how to implment 75% of those top ten secure concepts. The idea about XSS, XXE and other are behind my grasp at least in the current time</p>
 </section>
 
 <section>
