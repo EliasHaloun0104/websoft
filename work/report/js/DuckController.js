@@ -13,9 +13,7 @@ function hideTheDuck() {
       var left = Math.floor(w* Math.random());
       var top = Math.floor(h* Math.random());
       elem.style.top = top + "px";
-      elem.style.left = left + "px";
-
-    
+      elem.style.left = left + "px";    
     }
     wait++;
   }, 1000);
